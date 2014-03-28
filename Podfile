@@ -8,6 +8,6 @@ target 'Common' do
   pod 'Reachability'
 
   target 'MyApp', :exclusive => true do
-    xcodeproj 'MyApp'
+    xcodeproj 'MyApp.xcodeproj'
   end
 end
