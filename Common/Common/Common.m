@@ -7,7 +7,14 @@
 //
 
 #import "Common.h"
+#import "NSDate+CupertinoYankee.h"
 
 @implementation Common
+
+- (void)doStuff {
+    // Common using a pod
+    NSLog(@"Beginning of Day:%@", [[NSDate date] beginningOfDay]);
+    
+}
 
 @end

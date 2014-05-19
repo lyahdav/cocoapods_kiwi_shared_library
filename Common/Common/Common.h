@@ -10,4 +10,6 @@
 
 @interface Common : NSObject
 
+- (void)doStuff;
+
 @end

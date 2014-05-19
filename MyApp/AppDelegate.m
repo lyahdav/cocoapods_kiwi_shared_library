@@ -7,12 +7,20 @@
 //
 
 #import "AppDelegate.h"
-#import "AFNetworking.h"
+#import "NSDate+CupertinoYankee.h"
+#import "Common.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // MyApp using a pod
+    NSLog(@"Beginning of Day:%@", [[NSDate date] beginningOfDay]);
+    
+    // MyApp using Common
+    Common *common = [[Common alloc] init];
+    [common doStuff];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];

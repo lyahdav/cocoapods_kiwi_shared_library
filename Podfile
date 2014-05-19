@@ -1,13 +1,22 @@
-workspace 'MyApp.xcworkspace'
 platform :ios, '7.0'
 
-target 'Common' do
-  xcodeproj 'Common/Common.xcodeproj'
+workspace 'MyApp.xcworkspace'
 
-  pod 'AFNetworking'
-  pod 'Reachability'
+xcodeproj 'MyApp'
 
-  target 'MyApp', :exclusive => true do
-    xcodeproj 'MyApp.xcodeproj'
-  end
+pod 'CupertinoYankee', '~> 1.0'
+
+target :MyAppTests, :exclusive => true do
+    pod 'Kiwi/XCTest'
 end
+
+target :Common, :exclusive => true do
+    xcodeproj 'Common/Common'
+    pod 'CupertinoYankee', '~> 1.0'
+end
+
+target :CommonTests, :exclusive => true do
+    xcodeproj 'Common/Common'
+    pod 'Kiwi/XCTest'
+end
+
